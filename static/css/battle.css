@@ -1,0 +1,76 @@
+:root {
+  --globalnum: 30px;
+  --sizelim: 600px;
+}
+#player {
+  width: var(--globalnum);
+  height: var(--globalnum);
+  background-color: blue;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+}
+.enemy, .block, #chest, #person, #campfire {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: var(--globalnum);
+  height: var(--globalnum);
+}
+.ocean {
+  position: absolute;
+  z-index: -100;
+}
+.coin {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: calc(var(--globalnum)/2);
+  height: calc(var(--globalnum)/2);
+  transform: translate(50%, 50%);
+}
+#biggy, #obiggy {
+  border-style: solid;
+  border-color: darkblue;
+  border-width: 4px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+#obiggy {
+  background-image: url('/static/imgs/water.png');
+  background-size: cover;
+}
+#otherstuff {
+  position: absolute;
+  font-family: sans-serif;
+  width: var(--sizelim);
+}
+.plyr {
+  margin: 0;
+}
+#savebtn {
+  color: black;
+  background-color: red;
+  border: 3px solid orange;
+  border-radius: 10%;
+}
+#dpad {
+  margin: auto;
+  width: 190px;
+  padding: 0;
+}
+#dpad > .useless {
+  opacity: 0;
+}
+#dpad > button {
+  width: 60px;
+  margin: 0;
+  padding: 0;
+  height: 60px;
+  border-radius: 25%;
+}
+#dpad > button:active {
+  background-color: darkgray;
+}
